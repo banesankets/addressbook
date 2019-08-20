@@ -1,0 +1,6 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\conf\application.conf,D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\target\scala-2.12\classes\application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\conf\conf,D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\target\scala-2.12\classes\conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\conf\conf\DBAccessor.properties,D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\target\scala-2.12\classes\conf\DBAccessor.properties)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\conf\logback.xml,D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\target\scala-2.12\classes\logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\conf\routes,D:\Skillup\Java Skillup SanketB\Skillup\AddressBook\addressbook\target\scala-2.12\classes\routes)[0m

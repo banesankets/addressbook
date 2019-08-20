@@ -1,0 +1,151 @@
+@(people : List[addressbook.domain.Person])
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AddressBook</title>
+		<link href="@routes.Assets.at("/public/stylesheets", "home.css")" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="@routes.Assets.versioned("javascripts/jquery-3.0.0.min.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/home.js")"></script>
+		<script>
+			var persons = [];
+			@for(person <- people){	
+				var person = {
+					id : "@person.getId()",
+					fname: "@person.getFname()",
+					lname : "@person.getLname()",
+					mobile : "@person.getMobile()",
+					telephone : "@person.getTelephone()",
+					email : "@person.getEmail()",
+					address : "@person.getAddress"
+				};
+				persons.push(person);
+			}
+			var context = "/addressbook/";
+		</script>
+	</head>
+	<body onload = "loadNames()" ondragstart="return false;" ondrop="return false;">
+		<div class="container">
+			<div class="title">
+				<span id="titleText"><i class="fa fa-address-book-o"></i>  Address Book</span>
+			</div>
+			<div class="content">
+				<div class="contactSearch">
+					<input type="text" autocomplete="off" id="search" oninput="search()" placeholder="Search..">
+					<ul id="contactList"></ul>
+				</div>
+				<div class="displayDetails">
+					<input type=hidden id="id">
+					<div class="lable" id="name"></div>
+					<div class="details">
+						<table class="infoTable">
+							<tr>
+								<td><span class="lable"><b>Mobile</b></span></td>
+								<td><span class="value" id="mobileValue"></span></td>
+							</tr>
+							<tr>
+								<td><span class="lable"><b>Telephone</b></span></td>
+								<td><span class="value" id="telephoneValue"></span></td>
+							</tr>
+							<tr>
+								<td><span class="lable"><b>Email</b></span></td>
+								<td><span class="value" id="emailValue"></span></td>
+							</tr>
+							<tr>
+								<td><span class="lable"><b>Address</b></span></td>
+								<td><span class="value" id="addressValue"></span></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="operations">
+					<h2>Operations</h2>
+					<ul id="dbOperations">
+						<li><button onclick="displayPopup('add')" id="addContact"><i class="fa fa-plus"></i>      Add</button></li>
+						<li><button onclick="displayPopup('edit')" id="editContact"><i class="fa fa-pencil"></i>       Edit</button></li>
+						<li><button onclick="deleteContact()" id="deleteContact"><i class="fa fa-times"></i> Delete</button></li>
+					</ul>
+				</div>
+				<div class="options">
+					<h2>Options</h2>
+					<ul id="csvOptions">
+						<li>
+								<input id="importFile" type="file" accept=".csv" onchange="readCSVFile(event);"/>
+								<button onclick="importCSV()"><i class="fa fa-upload"></i> Import CSV</button>
+						</li>
+						<li>
+							<button id="exportFile" onclick="exportCSV()"><i class="fa fa-download"></i> Export CSV</button>
+						</li>
+					</ul>
+				</div>
+				<div class="popup">
+					<div class="popupWindow animate">
+						<div class="popupTitle"><span id="popupTitleText">Contact details</span></div>
+						<div>
+							<table >
+								<tr>
+									<td><input type="hidden" id="formId"></td>
+								</tr>
+								<tr>
+									<td><span class="lable">First Name<span class="required">*</span></span></td>
+									<td><input type="text" autocomplete="off" placeholder="Enter First Name" id="fname" oninput="isValueChanged()"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><span class="error" id="errfname"></span><td>
+								</tr>
+								<tr>
+									<td><span class="lable">Last Name<span class="required">*</span></span></td>
+									<td><input type="text" autocomplete="off" placeholder="Enter Last Name" id="lname" oninput="isValueChanged()"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><span class="error" id="errlname"></span><td>
+								</tr>
+								<tr>
+									<td><span class="lable">Mobile<span class="required">*</span></span></td>
+									<td><input type="text" autocomplete="off" placeholder="Enter Mobile No." id="mobile" oninput="isValueChanged()"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><span class="error" id="errmobile"></span><td>
+								</tr>
+								<tr>
+									<td><span class="lable">Telephone</span></td>
+									<td><input type="text" autocomplete="off" placeholder="Enter Telephone No." id="telephone" oninput="isValueChanged()"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><span class="error" id="errtelephone"></span><td>
+								</tr>
+								<tr>
+									<td><span class="lable">Email</span></td>
+									<td><input type="email" autocomplete="off" placeholder="Enter Email" id="email" oninput="isValueChanged()"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><span class="error" id="erremail"></span><td>
+								</tr>
+								<tr>						
+									<td><span class="lable">Address<span class="required">*</span></span></td>
+									<td><textarea rows="4" placeholder="Enter Address" cols="50" id="address" oninput="isValueChanged()"></textarea></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><span class="error" id="erraddress"></span><td>
+								</tr>
+					</table>
+							<div id=modalButtons>
+								<button id="modify"onclick="return modifyContact()">Save</button>
+								<button id="undo" onclick="undoChanges()">Undo</button>
+								<button id="cancel" onclick="closePopup()">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

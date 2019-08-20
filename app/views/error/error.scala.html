@@ -1,0 +1,45 @@
+@(uri : String, statusCode : Integer, message : String)
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Error</title>
+		<link href="@routes.Assets.at("/public/stylesheets", "home.css")" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+		<script src="@routes.Assets.versioned("javascripts/jquery-3.0.0.min.js")"></script>
+		<script src="@routes.Assets.versioned("javascripts/error.js")"></script>
+		<script type="text/javascript">
+			var context = "/addressbook/";
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				<span id="titleTest">Address Book</span>
+			</div>
+			<div class="content">
+				<center>
+					@if(statusCode == 404) {
+						<div id="error">
+							404<br>Oops... Page Not Found. 
+						</div>
+						<img id = "errImg" src= "@routes.Assets.at("/public/images", "error404.jpg")">
+					} else {
+						<div id="error">
+							500<br>Malfunctioning... Internal Server Error.
+						</div>
+						<img id = "errImg" src= "@routes.Assets.at("/public/images", "error500.png")">
+					}
+					<div id="errorMsg">
+						<br>Requested URL: @uri
+						<br>@message
+					</div>
+					<div>
+						<button onClick="backToHome()" id="goToHome">Home</button>
+					</div>
+				</center>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,233 @@
+*{
+	font-family: 'ABeeZee', sans-serif;
+}
+.container {
+	margin:auto;
+	vertical-align: middle;
+	height: 100%;
+	width : 1000px;
+	display: table-cell;
+}
+html,body
+{
+	height:100%;   
+}
+body
+{
+	display: table; 
+	margin: 0 auto;
+}
+.title {
+	height: 100px;
+	margin: auto;
+	border: 3px solid black;
+	background-color:#00BCD4;
+}
+#titleText {
+	font-size: 70px;
+	color: #EEEEEE;
+	display: block;
+	text-align:center;
+	padding:1vh;
+	
+}
+.content {
+	height: 500px;
+	margin: auto;
+	border:3px solid black;
+	border-top:none;
+	    width: inherit;
+}
+.contactSearch {
+	width: 25%;
+	height: 100%;
+	overflow-y: auto;
+	border-right:1px solid #ddd;
+	background-color:#E0E0E0;
+	float: left;
+}
+#search {
+	width: 85%;
+	font-size: 20px;
+	padding: 8px;
+	margin: 10px;
+	border:1px solid #ddd;
+	background-color:#F5F5F5;
+}
+#contactList {
+	list-style-type: none;
+	padding: 0;
+}
+.contact{
+	padding: 8px;
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+	display: block;
+	cursor: pointer;
+}
+.contact:hover {
+	background-color: #B2DFDB;
+}
+.highlight {
+	background-color: #00BFA5;
+}
+.displayDetails {
+	width: 49.2%;
+	height: 100%;
+	margin: auto;
+	overflow-y: auto;
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+	float: left;
+}
+#error {
+	font-size: 35px;
+}
+#name {
+	text-align: center;
+	font-size: 35px;
+	margin: 45px;
+	color:#00BFA5
+}
+.details{
+	margin: auto;
+	margin-top: 45px;
+}
+.lable {
+	font-size: 20px;
+	padding: 15px;
+}
+.infoTable{
+	border: 3px solid #00796B;
+	width: 75%;
+	height: 40%;
+	margin: auto;
+}
+.value {
+	word-break:break-all;
+	text-align:left;
+}
+h2{
+	text-align:center;
+}
+.operations {
+	width: 25%;
+	float: right;
+	height: 49.4%;
+	overflow-y: auto;
+	background-color:#E0E0E0;
+}
+#dbOperations {
+	padding: 10px;
+	margin: 0 auto;
+	list-style: none;
+	display: table;
+}
+button {
+	background-color: #00BFA5;
+	color: white;
+	padding: 7px 10px;
+	margin: 10px 0;
+	border: none;
+	cursor: pointer;
+	font-size:15px;
+	width:90px;
+}
+button:hover {
+	opacity: 0.5;
+}
+button:disabled:hover{
+	background-color: #00695C;
+	opacity: 1;
+}
+button:disabled{
+	background-color: #00695C;
+	cursor: not-allowed;
+}
+#csvOptions > li > button {
+	width:120px;
+}
+.options {
+	width: 25%;
+	float: right;
+	height: 50%;
+	overflow-y: auto;
+	border-top:3px solid black;
+	background-color:#E0E0E0;
+}
+#csvOptions {
+	padding: 10px;
+	margin: 0 auto;
+	list-style: none;
+	display: table;
+	
+}
+input[type="file"] {
+	display: none;
+}
+.popup {
+	display: none; 
+	position: fixed; 
+	z-index: 1; 
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%; 
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4); 
+}
+.popupWindow {
+	background-color: #fefefe;
+	margin:  auto; 
+	border: 5px solid black;
+	width: 500px; 
+	
+}
+animate{
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)} 
+	to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+	from {transform: scale(0)} 
+	to {transform: scale(1)}
+}
+.popupTitle {
+	width: 220px;
+	margin: auto;
+	height: 60px;
+}
+#popupTitleText {
+	font-size: 30px;
+	vertical-align: middle;
+}
+input[type=text], [type=email], textarea {
+	width: 90%;
+	padding: 12px 20px;
+	margin: 5px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+textarea {
+	resize: none;
+}
+#modalButtons {
+	margin : auto;
+	width: 60%;
+}
+.error {
+	padding: 12px 20px;
+	margin: 5px 0;
+	color: #e32;
+	display:inline;
+}
+.required {
+	color: #e32;
+	display:inline;
+}

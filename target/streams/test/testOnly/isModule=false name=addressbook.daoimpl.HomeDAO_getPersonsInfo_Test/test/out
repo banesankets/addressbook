@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest addressbook.daoimpl.[33mHomeDAO_getPersonsInfo_Test[0m.[36mtest_getPersonsInfo[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest addressbook.daoimpl.[33mHomeDAO_getPersonsInfo_Test[0m.[36mtest_getPersonsInfo[0m finished, took 4.128 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 4.134s[0m[0m

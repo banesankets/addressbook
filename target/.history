@@ -1,0 +1,238 @@
+eclipse
+exit
+run
+compile
+run
+default.driver = net.sourceforge.jtds.jdbc.Driver
+default.url = "jdbc:jtds:sqlserver://localhost:1433/sanketMark1"
+default.username = sa
+default.password = "boss"
+default.hikaricp.connectionTestQuery = "SELECT 1"
+}run
+exit
+run
+exit
+run
+exit
+run
+exit
+-debug-jvm 9999
+exit
+run
+exit
+test
+exit
+test
+exit
+run
+exit
+test
+exit
+test
+exit
+test
+run
+test
+run
+test
+run
+test
+cls
+test
+exit
+run
+exit
+run
+exit
+run
+exit
+run
+exit
+run
+exit
+run
+exit
+run
+test
+run
+test
+exit
+test
+run test
+run test 9999
+test
+compile
+test
+exit
+clean
+compile
+test
+exit
+run
+test
+exit
+test
+run
+test
+run
+test
+run
+test
+exit
+run
+exit
+test
+run
+exit
+run
+test
+exit
+test
+run
+test
+exit
+run
+exit
+test
+run
+exit
+build
+exit
+run
+exit
+run
+exit
+run
+test
+exit
+test
+run
+exit
+run
+test
+run
+exit
+run
+test
+run
+test
+exit
+update
+evicted
+reload pludin
+reload plugin
+reload plugins
+update
+run
+exit
+run
+update
+run
+exit
+run
+test
+reload
+eclipse with-source=true
+run
+test
+exit
+test
+run
+test
+exit
+test
+exit
+test
+reload
+test
+exit
+run
+exit
+test
+run
+test
+test-only test.addressbook.daoimpl.HomeDAO_importData_Test.java
+testOnly test.addressbook.daoimpl.HomeDAO_importData_Test.java
+testQuick
+run
+test
+run
+test
+testQuick
+run
+test
+testQuick
+test
+testOnly HomeDAO_importData_Test
+testOnly test.addressbook.daoimpl.HomeDAO_importData_Test
+testOnly addressbook.daoimpl.HomeDAO_importData_Test
+run
+testOnly addressbook.daoimpl.HomeDAO_importData_Test
+test
+testOnly addressbook.daoimpl.HomeDAO_getPersonInfo_Test
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test
+run
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test
+test
+run
+test
+run
+test
+testOnly addressbook.daoimpl.HomeDAO_insertData_Test
+run
+exit
+run
+test
+run
+exit
+run
+exit
+reload
+eclipse with-source=true
+run
+exit
+run
+exit
+run
+exit
+run
+exit
+run
+exit
+run
+test
+run
+testOnly addressbook.daoimpl.HomeDAO_deleteData_Test
+testOnly addressbook.daoimpl.HomeDAO_insertData_Test
+testOnly addressbook.daoimpl.HomeDAO_updateData_Test
+testOnly addressbook.daoimpl.HomeDAO_importData_Test
+run
+exit
+run
+exit
+run
+playGenerateSecret
+test
+quicktest
+quicktesttestQuick
+testQuick
+exit
+test
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test.test_getPersonsInfo 
+cls
+clear
+clean
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test.test_getPersonsInfo()
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test.test_getPersonsInfo
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test.test_getPersonsInfo
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test.loadDB
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test
+testOnly HomeDAO_getPersonsInfo_Test
+testOnly test.addressbook.daoimpl.HomeDAO_getPersonsInfo_Test.test_getPersonsInfo
+testOnly addressbook.daoimpl.HomeDAO_getPersonsInfo_Test.test_getPersonsInfo
+testOnly HomeDAO_getPersonsInfo_Test.test_getPersonsInfo
+testOnly test_getPersonsInfo
+run 9001
+     run 9001
+run 9001
